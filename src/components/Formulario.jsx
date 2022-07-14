@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Formulario = () => {
+const Formulario = ({ pacientes, setPacientes }) => {
     
     const [nombre, setNombre] = useState('');
     const [propietario, setPropietario] = useState('');
@@ -12,6 +12,8 @@ const Formulario = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        //validacion del formulario
         if ([ nombre, propietario, email, fecha, sintomas ].includes('')) {
             console.log('falta un campo')
 
@@ -19,6 +21,24 @@ const Formulario = () => {
             return;
         } 
         setError(false)
+
+        //Objeto Paciente
+        const objetoPaciente = {
+            nombre,
+            propietario,
+            email,
+            fecha,
+            sintomas
+        }
+
+        setPacientes([...pacientes, objetoPaciente])
+
+        //Reiniciar Form
+        setNombre('')
+        setPropietario('')
+        setEmail('')
+        setFecha('')
+        setSintomas('')
     }
 
     return (
