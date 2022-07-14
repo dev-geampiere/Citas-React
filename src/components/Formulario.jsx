@@ -1,17 +1,22 @@
+import { useState } from "react";
+
 const Formulario = () => {
-    return ( 
+    
+    const [nombre, setNombre] = useState('');
+
+    return (
         <div className="md:w-1/2 lg:w-2/5">
-            <h2 className="font-black text-center text-2xl">
+            <h2 className="font-black text-center text-xl">
                 Seguimientos Pacientes
             </h2>
-            <p className="text-lg text-center mt-3 mb-10">
+            <p className="text-l text-center mt-3 mb-1">
                 Añade Pacientes y {''}
                 <span className="text-indigo-600 font-bold">
                     Administralos
                 </span>
             </p>
             <form className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
-                <div className="mb-5">
+                <div className="mb-4">
                     <label htmlFor="mascota" className="block uppercase text-gray-700 font-black">
                         Nombre Mascota
                     </label>
@@ -22,7 +27,7 @@ const Formulario = () => {
                         className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-mg"
                     />
                 </div>
-                <div className="mb-5">
+                <div className="mb-4">
                     <label htmlFor="propietario" className="block uppercase text-gray-700 font-black">
                         Nombre Propietario
                     </label>
@@ -33,7 +38,7 @@ const Formulario = () => {
                         className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-mg"
                     />
                 </div>
-                <div className="mb-5">
+                <div className="mb-4">
                     <label htmlFor="email" className="block uppercase text-gray-700 font-black">
                         Email
                     </label>
@@ -44,7 +49,7 @@ const Formulario = () => {
                         className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-mg"
                     />
                 </div>
-                <div className="mb-5">
+                <div className="mb-4">
                     <label htmlFor="alta" className="block uppercase text-gray-700 font-black">
                         Alta
                     </label>
@@ -55,7 +60,7 @@ const Formulario = () => {
                         className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-mg"
                     />
                 </div>
-                <div className="mb-5">
+                <div className="mb-4">
                     <label htmlFor="sintomas" className="block uppercase text-gray-700 font-black">
                         Sintomas
                     </label>
