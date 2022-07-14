@@ -16,7 +16,6 @@ const ListadoPacientes = () => {
             <Pacientes />
             <Pacientes />
             <Pacientes />
-
         </div>
      );
 }
