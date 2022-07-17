@@ -1,4 +1,4 @@
-const Paciente = ({paciente}) => {
+const Paciente = ({paciente, setPaciente}) => {
     const {nombre, propietario, email, fecha, sintomas} = paciente
     return ( 
         <div className="mx-5 my-10 bg-white shadow-md px-5 py-8 rounded-xl">
@@ -32,6 +32,18 @@ const Paciente = ({paciente}) => {
                         {sintomas}
                     </span>
                 </p>
+
+                <div className="flex mt-10 justify-between">
+                    <button 
+                        type='button'
+                        className="py-2 px-10 bg-indigo-600 rounded-md text-white uppercase hover:bg-indigo-700 font-bold"
+                        onClick={() => setPaciente(paciente)}
+                    >Editar</button>
+                    <button 
+                        type='button'
+                        className="py-2 px-10 bg-red-600 rounded-lg text-white uppercase hover:bg-red-700 font-bold"
+                    >Eliminar</button>
+                </div>
             </div>
      );
 }
