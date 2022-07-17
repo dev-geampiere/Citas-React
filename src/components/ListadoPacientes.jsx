@@ -1,6 +1,7 @@
 import Pacientes from "./Pacientes";
 
-const ListadoPacientes = () => {
+const ListadoPacientes = ({pacientes}) => {
+
     return ( 
         <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
             <h2 className="font-black text-center text-xl">
@@ -12,10 +13,12 @@ const ListadoPacientes = () => {
                     Pacientes y Citas
                 </span>
             </p>
-            <Pacientes />
-            <Pacientes />
-            <Pacientes />
-            <Pacientes />
+            {pacientes.map( paciente =>(
+                <Pacientes 
+                    key = {paciente.id}
+                    paciente = {paciente}
+                />
+            ))}
         </div>
      );
 }
