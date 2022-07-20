@@ -152,7 +152,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
                     </label>
                     <textarea
                         id="sintomas"
-                        className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-mg"
+                        className="border-2 resize-none w-full p-2 mt-2 placeholder-gray-400 rounded-mg"
                         placeholder="Describe los Sintomas"
                         value={sintomas}
                         onChange={ (e) => setSintomas(e.target.value) }
